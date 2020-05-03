@@ -11,10 +11,29 @@ echo json_encode($usuarios);
 */
 
 
-$root = new Usuario();
 
+
+// traz um usuario especifico 
+/* $root = new Usuario();
 $root->loadbyid(3);
-
 echo $root;
+*/
 
+// carrega uma lista de usuario
+/*$lista = Usuario::getLista();
+echo json_encode($lista);
+*/
+
+// carrega uma lista de usuarios buscando pelo login
+/*
+$search = usuario::search("jo");
+
+echo json_encode($search)
+*/
+
+// carrega um usuario usando o login e a senha
+$usuario = new Usuario();
+$usuario->login("root", "!@#$%");
+
+echo $usuario;
 ?>
